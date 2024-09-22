@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: end;
+  align-items: start;
+  position: relative;
+}
+
+.container::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: url(./media/bgimage.jpg) no-repeat left center;
+  background-size: 160%;
+  position: absolute;
+}
+
+.clock {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: url(./media/clock-body.png) center center;
+  background-size: cover;
+  z-index: 2;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+  margin-top: 8%;
+  margin-right: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.clock::before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  background-color: #222;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.s {
+  width: 0px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  transform: rotate(0deg);
+  z-index: 3;
+}
+
+.s::before {
+  content: "";
+  width: 7px;
+  height: 178px;
+  background: url(./media/s-arrow.png) no-repeat;
+  background-size: cover;
+  position: absolute;
+}
+
+.m {
+  width: 0px;
+  height: 210px;
+  display: flex;
+  justify-content: center;
+  transform: rotate(120deg);
+  z-index: 2;
+}
+
+.m::before {
+  content: "";
+  width: 15px;
+  height: 150px;
+  background: url(./media/min-arrow.png) no-repeat;
+  background-size: contain;
+  position: absolute;
+}
+
+.h {
+  width: 0px;
+  height: 165px;
+  display: flex;
+  justify-content: center;
+  transform: rotate(80deg);
+}
+
+.h::before {
+  content: "";
+  width: 20px;
+  height: 140px;
+  background: url(./media/hour-arrow.png) no-repeat;
+  background-size: contain;
+  position: absolute;
+  left: -10px;
+}
